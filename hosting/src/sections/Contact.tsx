@@ -36,7 +36,7 @@ export default Contact
 const Container = styled.div`
   margin-top: 32px;
   background-color: ${colors.yellow.light};
-  padding: 16px;
+  padding: 32px;
 `
 
 const StyledLargeTitle = styled(ExtraLargeTitle)`

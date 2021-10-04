@@ -53,7 +53,7 @@ const Container = styled.div`
 
 const UsTextContent = styled.div`
   background-color: ${colors.yellow.light};
-  padding: 16px;
+  padding: 32px;
 `
 
 const StyledLargeTitle = styled(ExtraLargeTitle)`
