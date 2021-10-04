@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useIsMobile } from "../hooks/useIsMobile";
 import { Desktop, Mobile } from './mobile';
 
 export const Row = styled.div`
@@ -12,10 +13,22 @@ export const Column = styled.div`
   flex-direction: column;
 `
 
-export const Section = styled.section<{ bg?: string }>`
+
+export const Section: React.FC<{ bg?: string, id: string }> = ({ bg, id, children }) => {
+
+  const isMobile = useIsMobile();
+
+  return (
+    <SectionContainer id={id} bg={bg} isMobile={isMobile}>
+      {children}
+    </SectionContainer>
+  )
+}
+
+const SectionContainer = styled.section<{ bg?: string, isMobile: boolean }>`
   width: 100%;
   background-color: ${({ bg }) => bg};
-  scroll-margin-top: -32px;
+  scroll-margin-top: ${({ isMobile }) => isMobile ? '64px' : '-32px'};
 `
 
 export const PaddedContent: React.FC = ({ children }) => {

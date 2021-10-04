@@ -71,15 +71,14 @@ const ContactDetails: React.FC = () => {
     return (
       <>
         <Margin>
-          <BoldBody letMeMargin={true}>Mail: catalina@eastcomunicacion.com</BoldBody>
-          <BoldBody letMeMargin={true}>Mail: josefina@eastcomunicacion.com</BoldBody>
-        </Margin>
-        <Margin>
           <a href="../catalina.vcard" target="_blank">
+            <BoldBody letMeMargin={true}>Mail: catalina@eastcomunicacion.com</BoldBody>
             <BoldBody letMeMargin={true}>Tel: (+598) 93 825 333</BoldBody>
           </a>
-
+        </Margin>
+        <Margin>
           <a href="../josefina.vcard" target="_blank">
+            <BoldBody letMeMargin={true}>Mail: josefina@eastcomunicacion.com</BoldBody>
             <BoldBody letMeMargin={true}>Tel: (+598) 99 027 075</BoldBody>
           </a>
         </Margin>
@@ -110,7 +109,7 @@ const ContactDetails: React.FC = () => {
 
 
 const Margin = styled.div`
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 `
 
 const BoldBody = styled(Body)`
