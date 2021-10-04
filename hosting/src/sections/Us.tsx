@@ -52,7 +52,7 @@ const Container = styled.div`
 `
 
 const UsTextContent = styled.div`
-  background-color: ${colors.yellow1};
+  background-color: ${colors.yellow.light};
   padding: 16px;
 `
 
@@ -143,7 +143,7 @@ const UsProfileFooter: React.FC<Omit<UsProfileProps, 'img'>> = ({ name, linkedin
 
 
 const UsProfileFooterContainer = styled(Row)`
-  background-color: ${colors.blue1};
+  background-color: ${colors.blue.dark};
   padding: 4px 16px;
   align-items:center;
 `

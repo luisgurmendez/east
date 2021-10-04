@@ -38,7 +38,7 @@ const scale = keyframes`
 `;
 
 const Container = styled.div`
-  background-color: ${colors.blue3};
+  background-color: ${colors.blue.light};
   width: 40px;
   height: 40px;
   display:flex;

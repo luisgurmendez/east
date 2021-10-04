@@ -97,13 +97,13 @@ const DesktopNavBar: React.FC = () => {
         </Row>
         <Row style={{ alignItems: 'center' }}>
           <a href="https://www.instagram.com/eastcomunicacion/" target="_blank">
-            <StyledIcon color={colors.blue1} size="lg" icon={faInstagram} />
+            <StyledIcon color={colors.blue.dark} size="lg" icon={faInstagram} />
           </a>
           <a href="https://www.instagram.com/eastcomunicacion/" target="_blank">
-            <StyledIcon color={colors.blue1} size="lg" icon={faLinkedinIn} />
+            <StyledIcon color={colors.blue.dark} size="lg" icon={faLinkedinIn} />
           </a>
           <a href="https://wa.me/59893825333" target="_blank">
-            <StyledIcon color={colors.blue1} size="lg" icon={faWhatsapp} />
+            <StyledIcon color={colors.blue.dark} size="lg" icon={faWhatsapp} />
           </a>
 
         </Row>
@@ -136,9 +136,9 @@ const MobileNavbar: React.FC = () => {
         </LinkToSection>
         <Row style={{ alignItems: 'center' }}>
           {!isMenuOpen ?
-            <StyledIcon color={colors.blue1} size="lg" icon={faBars} onClick={handleOpen} />
+            <StyledIcon color={colors.blue.dark} size="lg" icon={faBars} onClick={handleOpen} />
             :
-            <StyledIcon color={colors.blue1} size="lg" icon={faTimes} onClick={handleClose} />
+            <StyledIcon color={colors.blue.dark} size="lg" icon={faTimes} onClick={handleClose} />
           }
         </Row>
       </FullWidthRow>

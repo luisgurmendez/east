@@ -28,7 +28,7 @@ const commonTypographyOptions = css<TypographyOptions>`
   ${(props) => (props.align ? `text-align: ${props.align};` : '')}
   ${(props) => (props.display ? `display: ${props.display};` : '')}
   ${(props) => (props.noWrap ? noWrapStyles : '')}
-  color: ${colors.blue1};
+  color: ${colors.blue.dark};
   font-family: ${typeface.family};
 `;
 

@@ -10,13 +10,13 @@ interface WithError {
 
 export const Input = styled.input<WithError>`
   padding: 4px 12px;
-  border: 2px solid ${props => props.error ? 'red' : colors.blue1};
+  border: 2px solid ${props => props.error ? 'red' : colors.blue.dark};
   width: 100%;
 `
 
 export const TextAreaInput = styled.textarea<WithError>`
   padding: 4px 12px;
-  border: 2px solid ${props => props.error ? 'red' : colors.blue1};
+  border: 2px solid ${props => props.error ? 'red' : colors.blue.dark};
   width: 100%;
 `
 

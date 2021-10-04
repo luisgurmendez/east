@@ -57,6 +57,6 @@ const WhiteBody = styled(SmallBody)`
 const Footer = styled.div`
   width: 100%;
   padding: 16px;
-  background-color: ${colors.blue1};
+  background-color: ${colors.blue.dark};
   
 `

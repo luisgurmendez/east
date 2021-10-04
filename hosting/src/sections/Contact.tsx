@@ -35,7 +35,7 @@ export default Contact
 
 const Container = styled.div`
   margin-top: 32px;
-  background-color: ${colors.yellow3};
+  background-color: ${colors.yellow.light};
   padding: 16px;
 `
 

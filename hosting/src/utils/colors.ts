@@ -1,11 +1,15 @@
 
 export const colors = {
 
-  blue1: '#073C5D',
-  blue2: '#39637D',
-  blue3: '#598BAA',
-  yellow1: '#F5EBDA',
-  yellow2: '#E2B771',
-  yellow3: '#EED4AA',
+  blue: {
+    dark: '#073C5D',
+    base: '#39637D',
+    light: '#598BAA'
+  },
+  yellow: {
+    dark: '#EED4AA',
+    base: '#E2B771',
+    light: '#F5EBDA'
+  }
 }
 

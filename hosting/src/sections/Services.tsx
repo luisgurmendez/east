@@ -51,7 +51,7 @@ const Services: React.FC<ServicesProps> = ({ }) => {
 export default Services
 
 const Container = styled.div`
-  background-color: ${colors.blue3};
+  background-color: ${colors.blue.light};
   padding: 16px;
 `
 
