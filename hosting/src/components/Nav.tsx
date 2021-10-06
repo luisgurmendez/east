@@ -1,17 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components/macro';
-import { Column, Row } from './layouts';
+import React from 'react';
+import styled from 'styled-components/macro';
+import { Row } from './layouts';
 import { Body } from './Typography';
 import { colors } from '../utils/colors';
-import { faInstagram, faLinkedin, faLinkedinIn, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedinIn, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useIsMobile } from '../hooks/useIsMobile';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useNavbarOpen } from '../state/NavbarMenuOpenContext';
 
-interface NavProps { }
-
-const Nav: React.FC<NavProps> = ({ }) => {
+const Nav: React.FC = () => {
 
   const isMobile = useIsMobile();
   if (isMobile) {
@@ -35,11 +33,6 @@ const Container = styled.div`
 const FullWidthRow = styled(Row)`
   width: 100%;
   max-width: 100%;
-`
-
-const LinksRow = styled(FullWidthRow)`
-  padding: 8px;
-  justify-content: center;
 `
 
 interface LinkToSectionProps {
@@ -68,16 +61,35 @@ const StyledIcon = styled(FontAwesomeIcon)`
 `
 
 
+const SocialMediaRow: React.FC = () => {
+  return (
+    <Row style={{ alignItems: 'center' }}>
+      <a href="https://www.instagram.com/eastcomunicacion/" target="_blank">
+        <StyledIcon color={colors.blue.dark} size="lg" icon={faInstagram} />
+      </a>
+      <a href="https://www.instagram.com/eastcomunicacion/" target="_blank">
+        <StyledIcon color={colors.blue.dark} size="lg" icon={faLinkedinIn} />
+      </a>
+      <a href="https://wa.me/59893825333" target="_blank">
+        <StyledIcon color={colors.blue.dark} size="lg" icon={faWhatsapp} />
+      </a>
+
+    </Row>
+  )
+}
+
 const DesktopNavBar: React.FC = () => {
 
   return (
     <Container>
       <FullWidthRow>
-        <img
-          src="/east.jpeg"
-          width="150px"
-          alt="east"
-        />
+        <LinkToSection to="#home">
+          <img
+            src="/east.jpeg"
+            width="150px"
+            alt="east"
+          />
+        </LinkToSection>
         <Row style={{ flex: 1, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
           <LinkToSection to="#home">
             Inicio
@@ -95,18 +107,7 @@ const DesktopNavBar: React.FC = () => {
             Contacto
       </LinkToSection>
         </Row>
-        <Row style={{ alignItems: 'center' }}>
-          <a href="https://www.instagram.com/eastcomunicacion/" target="_blank">
-            <StyledIcon color={colors.blue.dark} size="lg" icon={faInstagram} />
-          </a>
-          <a href="https://www.instagram.com/eastcomunicacion/" target="_blank">
-            <StyledIcon color={colors.blue.dark} size="lg" icon={faLinkedinIn} />
-          </a>
-          <a href="https://wa.me/59893825333" target="_blank">
-            <StyledIcon color={colors.blue.dark} size="lg" icon={faWhatsapp} />
-          </a>
-
-        </Row>
+        <SocialMediaRow />
       </FullWidthRow>
     </Container>
   )
@@ -142,9 +143,7 @@ const MobileNavbar: React.FC = () => {
           }
         </Row>
       </FullWidthRow>
-      <MobileMenu open={isMenuOpen}>
-
-      </MobileMenu>
+      <MobileMenu open={isMenuOpen} />
 
     </Container>
   )
@@ -179,6 +178,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open }) => {
       <LinkToSection onClick={handleNavItemClick} to="#contact">
         Contacto
       </LinkToSection>
+      <br />
+      <SocialMediaRow />
     </MobileMenuContainer>
   )
 }

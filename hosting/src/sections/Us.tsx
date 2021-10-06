@@ -1,16 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components/macro';
-import { StringLiteralLike } from 'typescript';
 import { Column, Row, Section, PaddedContent } from '../components/layouts';
 import { Desktop, Mobile } from '../components/mobile';
 import { Body, ExtraLargeTitle } from '../components/Typography';
 import { colors } from '../utils/colors';
-import { faLinkedinIn, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-interface UsProps { }
-
-const Us: React.FC<UsProps> = ({ }) => {
+const Us: React.FC = () => {
 
   return (
     <Section id="us">

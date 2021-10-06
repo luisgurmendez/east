@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import { Button } from '../components/Button';
 import { InputWithError, TextAreaInputWithError, useInput } from '../components/Input';
-import { Column, PaddedContent, Row, Section } from '../components/layouts';
+import { Column, Row, Section } from '../components/layouts';
 import { Desktop, Mobile } from '../components/mobile';
 import { ExtraLargeTitle, Body } from '../components/Typography';
 import { colors } from '../utils/colors';
@@ -72,18 +72,18 @@ const ContactDetails: React.FC = () => {
       <>
         <Margin>
           <a href="../catalina.vcard" target="_blank">
-            <BoldBody letMeMargin={true}>Mail: catalina@eastcomunicacion.com</BoldBody>
-            <BoldBody letMeMargin={true}>Tel: (+598) 93 825 333</BoldBody>
+            <StyledBody letMeMargin={true}>Mail: catalina@eastcomunicacion.com</StyledBody>
+            <StyledBody letMeMargin={true}>Tel: (+598) 93 825 333</StyledBody>
           </a>
         </Margin>
         <Margin>
           <a href="../josefina.vcard" target="_blank">
-            <BoldBody letMeMargin={true}>Mail: josefina@eastcomunicacion.com</BoldBody>
-            <BoldBody letMeMargin={true}>Tel: (+598) 99 027 075</BoldBody>
+            <StyledBody letMeMargin={true}>Mail: josefina@eastcomunicacion.com</StyledBody>
+            <StyledBody letMeMargin={true}>Tel: (+598) 99 027 075</StyledBody>
           </a>
         </Margin>
-        <Margin>
-          <BoldBody letMeMargin={true}>Punta del Este, Uruguay</BoldBody>
+        <Margin style={{ alignSelf: 'flex-start' }}>
+          <StyledBody letMeMargin={true}>Punta del Este, Uruguay</StyledBody>
         </Margin>
       </>
     )
@@ -112,8 +112,7 @@ const Margin = styled.div`
   margin-bottom: 16px;
 `
 
-const BoldBody = styled(Body)`
-  font-weight: bold;
+const StyledBody = styled(Body)`
   margin: 0px !important;
 `
 
@@ -168,5 +167,3 @@ const ContactForm: React.FC = () => {
     </ContactFormContent>
   )
 }
-
-const ContactFormContainer = styled.div``

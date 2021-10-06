@@ -6,15 +6,14 @@ import Clients from './sections/Clients';
 import Contact from './sections/Contact';
 import Home from './sections/Home';
 import ScrollToTop from './components/ScrollToTop';
-import Nav, { NavbarBackdrop } from './components/Nav';
-import { NavbarMenuOpenProvider, useNavbarOpen } from './state/NavbarMenuOpenContext';
+import Nav from './components/Nav';
+import { NavbarMenuOpenProvider } from './state/NavbarMenuOpenContext';
 import { colors } from './utils/colors';
 import { SmallBody } from './components/Typography';
 
 
 function App() {
 
-  const isNavMenuOpen = useNavbarOpen()[0];
   return (
     <NavbarMenuOpenProvider>
       <Container>
